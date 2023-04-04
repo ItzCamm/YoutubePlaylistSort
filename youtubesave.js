@@ -21,7 +21,6 @@ async function saveAndDeleteVideos() {
         const saveToPlaylistButton = document.querySelector('ytd-menu-service-item-renderer.style-scope:nth-child(3) > tp-yt-paper-item:nth-child(1)');
         if (saveToPlaylistButton) {
             saveToPlaylistButton.click();
-            await sleep(500); // Adjust sleep time as needed for the user to choose a playlist
         }
 
     //promise to wait for user to press X
@@ -48,7 +47,7 @@ async function saveAndDeleteVideos() {
         const removeFromPlaylistButton = document.querySelector('ytd-menu-service-item-renderer.style-scope:nth-child(5) > tp-yt-paper-item:nth-child(1)');
         if (removeFromPlaylistButton) {
             removeFromPlaylistButton.click();
-            await sleep(500); // sleep because the browser may not be able to handle the process immediately
+            await sleep(500); // sleep to avoid conflictions
         }
     }
 }
